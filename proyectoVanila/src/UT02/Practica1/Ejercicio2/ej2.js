@@ -11,10 +11,10 @@ function puntuacionMedia() {
 
 function compararEquipos(equipo1, equipo2) {
     if (equipo1>equipo2){
-        return "La media de puntos del equipo 1 es mayor, con: " + equipo1 + " puntos";
+        return "La media de puntos del equipo 1 es mayor con: " + equipo1 + " puntos";
     }
     if (equipo2>equipo1){
-        return "La media de puntos del equipo 2 es mayor, con: " + equipo2 + " puntos";
+        return "La media de puntos del equipo 2 es mayor con: " + equipo2 + " puntos";
     }
     else {
         return "Ambas medias de puntos son iguales";
