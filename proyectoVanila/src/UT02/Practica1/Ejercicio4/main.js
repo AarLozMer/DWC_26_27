@@ -2,6 +2,7 @@
 
 import {comprobarProducto} from "./ej4.js";
 
-console.log(comprobarProducto("Esparragos", 12, 23));
-console.log(comprobarProducto("", -4, 45));
-console.log(comprobarProducto("", 30, 140));
+
+console.log(comprobarProducto("Esparragos", "Caramelo", 23));
+console.log(comprobarProducto("Berenjena", 4, 45));
+console.log(comprobarProducto("a", 30, 140));
