@@ -13,6 +13,17 @@ import {tablasDeMultiplicar, multiplicarNumeros} from "../Bibliotecas/Bibiliotec
 console.log(`Practica 2`);
 console.log(`--------------------------------`)
 console.log(tablasDeMultiplicar(6, multiplicarNumeros));
-console.log(tablasDeMultiplicar(-2, multiplicarNumeros));
-
-
+console.log(tablasDeMultiplicar("As", multiplicarNumeros));
+console.log(tablasDeMultiplicar(5.5, multiplicarNumeros));
+console.log(`--------------------------------`)
+// Practica 3
+import {calcularTotal} from "../Bibliotecas/BibliotecaEj3.js";
+console.log(`Practica 3`);
+console.log(`--------------------------------`)
+const prueba
+console.log(calcularTotal());
+console.log(calcularTotal(40.34));
+console.log(calcularTotal(250.45));
+console.log(calcularTotal(56.56));
+console.log(calcularTotal(56));
+console.log(`--------------------------------`)

@@ -23,21 +23,23 @@ const comprobarPositivo = (num) => {
 }
 
 const comprobarEntero = (num) => {
-    const ejemplo = 2;
-
-    if (typeof num !==  ejemplo) {
-        return false;
+    if (!isNaN(num)) {
+        if (Number.isInteger(num)) {
+            return true;
+        } else {
+            return false;
+        }
     } else {
-        return true;
+        return false;
     }
 }
 
 const tablasDeMultiplicar = (numero, funcion) => {
-    if (comprobarPositivo(numero) === true && comprobarEntero(numero) === false) {
+    if (comprobarPositivo(numero) === true && comprobarEntero(numero) === true) {
         return multiplicarNumeros(numero);
     } else {
-        return `Introduce un numero entero positivo retrasado mental`;
+        return `Introduce un numero entero positivo, retrasado mental`;
     }
 }
 
-export {tablasDeMultiplicar, multiplicarNumeros};
+export {tablasDeMultiplicar, multiplicarNumeros, comprobarEntero};
