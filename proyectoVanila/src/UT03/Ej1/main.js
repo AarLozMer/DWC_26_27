@@ -16,14 +16,14 @@ console.log(tablasDeMultiplicar(6, multiplicarNumeros));
 console.log(tablasDeMultiplicar("As", multiplicarNumeros));
 console.log(tablasDeMultiplicar(5.5, multiplicarNumeros));
 console.log(`--------------------------------`)
+
 // Practica 3
-import {calcularTotal} from "../Bibliotecas/BibliotecaEj3.js";
+import { calcularTotal } from "../Bibliotecas/BibliotecaEJ3.js";
 console.log(`Practica 3`);
 console.log(`--------------------------------`)
-const prueba
-console.log(calcularTotal());
-console.log(calcularTotal(40.34));
-console.log(calcularTotal(250.45));
-console.log(calcularTotal(56.56));
-console.log(calcularTotal(56));
-console.log(`--------------------------------`)
+console.log(calcularTotal([1, 2, 3, 4, 5]));
+console.log(calcularTotal([40.34, 67.45, 67.3]));
+console.log(calcularTotal([123.45, 123.56, 34.56, 17.7890, 234.678, 10000.34, 3556.445]));
+console.log(calcularTotal([123.567, 50.89, 346.78, 24.56]));
+console.log(calcularTotal([56, 45, 67, 67, 89]));
+console.log(`--------------------------------`);

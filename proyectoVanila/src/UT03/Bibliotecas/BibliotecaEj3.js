@@ -1,14 +1,27 @@
 "use strict";
 const calcularTotal = (factura) => {
     if (Array.isArray(factura)) {
-        const segundoArray = [factura.length];
-        const tercerArray = [factura.length];
-        factura.map((v,i,a) => {
-            segundoArray[i]=v;
-            tercerArray[i]=calcularPropina(v);
-        });
+        const primerArray = [...factura];
+        const segundoArray = new Array(factura.length);
+        const tercerArray = new Array(factura.length);
+        
+        try {
+            return factura.map((v,i,a) => {
+                if (comprobarDouble(v)) {
+                segundoArray[i]= calcularPropina(v);
+                tercerArray[i]= sumarNumeros(v, calcularPropina(v));
+                console.log(`Para la ${i+1} factura de ${primerArray[i].toFixed(2)} €, se le atribuye una propina de ${segundoArray[i].toFixed(2)} €, por lo que el precio final es de ${tercerArray[i].toFixed(2)} €`);
+                } else {
+                    throw new Error(`No me has introducido una lista de facturas, carapolla`);
+                }
+            });
+        } 
+        catch (e) {
+            return e.message;
+        }
 
-        return tercerArray;
+
+        
     } else {
         return `No me has introducido una lista de facturas`;
     }
@@ -16,14 +29,20 @@ const calcularTotal = (factura) => {
 
 const calcularPropina = (factura) => {
     if (factura < 50) {
-        return factura*1.2;
+        return factura*0.2;
     }
     else if (factura >= 50 && factura <=200) {
-        return factura*1.15;
+        return factura*0.15;
     }
     else {
-        return factura*1.1;
+        return factura*0.1;
     }
+}
+
+
+
+const sumarNumeros = (cosa1, cosa2) => {
+    return cosa1+cosa2;
 }
 
 const comprobarDouble = (dolorosa) => {
@@ -33,4 +52,4 @@ const comprobarDouble = (dolorosa) => {
     */
     return Number.isFinite(dolorosa) && !Number.isInteger(dolorosa);
 }
-export {calcularTotal, comprobarDouble};
+export {calcularTotal};
