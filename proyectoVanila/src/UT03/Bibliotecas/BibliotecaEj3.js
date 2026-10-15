@@ -1,10 +1,10 @@
 "use strict";
+import {esArray} from "./BibliotecaEj4.js";
 const calcularTotal = (factura) => {
-    if (Array.isArray(factura)) {
+    if (esArray(factura)) {
         const primerArray = [...factura];
         const segundoArray = new Array(factura.length);
         const tercerArray = new Array(factura.length);
-        
         try {
             return factura.map((v,i,a) => {
                 if (comprobarDouble(v)) {
@@ -19,9 +19,6 @@ const calcularTotal = (factura) => {
         catch (e) {
             return e.message;
         }
-
-
-        
     } else {
         return `No me has introducido una lista de facturas`;
     }
