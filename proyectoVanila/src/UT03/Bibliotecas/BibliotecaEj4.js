@@ -1,24 +1,23 @@
 "use strict";
 
-const calcular = (funcion1, funcion2, funcion3) => {
-    return `${funcion1}.\n Suma de arrays recibidos\n ${funcion2}. \n Array impreso de forma correcta ${funcion3}`;
+const calcular = (generarArray, recibirArrays, imprimirArray) => {
+    
 }
 
 const generarArray = (tamano) => {
-    const arrayGenerado = new Array(tamano);
+    const arrayGenerado = new Array(tamano).fill(0);
     return arrayGenerado.map((v, i, a) => {
-        arrayGenerado[i] = Math.floor(Math.random()*101);
-        return(`La posicion ${i+1} tiene un valor de ${arrayGenerado[i]}`);
+       return arrayGenerado[i] = Math.floor(Math.random()*100) + 1;
     });
 }
 
 const recibirArrays = (array1, array2) => {
     if (esArray(array1) && esArray(array2)) {
         if (compararLongitudArrays(array1, array2)) {
-            const tercerArray = new Array(array1.length);
+            const tercerArray = new Array(array1.length).fill(0);
             
             return array2.map((v, i, a) => {
-                return tercerArray[i] = array1[i] + array2[array2.length - i];
+                return `${tercerArray[i] = array1[i] + array2[array2.length - 1 -i]}`;
             });
         } else {
             return `Cara almendra, los arrays no tienen la misma longitud`;

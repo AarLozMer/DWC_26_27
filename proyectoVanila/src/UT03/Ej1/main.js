@@ -18,7 +18,7 @@ console.log(tablasDeMultiplicar(5.5, multiplicarNumeros));
 console.log(`--------------------------------`)
 
 // Practica 3
-import {calcularTotal} from "../Bibliotecas/BibliotecaEj3.js";
+import {calcularTotal} from "../Bibliotecas/BibliotecaEJ3.js";
 console.log(`Practica 3`);
 console.log(`--------------------------------`)
 console.log(calcularTotal([1, 2, 3, 4, 5]));
@@ -31,6 +31,6 @@ console.log(`--------------------------------`);
 // Practica 4
 import {calcular, generarArray, imprimirArray, recibirArrays } from "../Bibliotecas/BibliotecaEj4.js";
 console.log(`Practica 3`);
-console.log(`--------------------------------`)
+console.log(`--------------------------------`);
 console.log(calcular(generarArray(5), recibirArrays([123, 115, 45, 78], [56, 67, 34, 98]), imprimirArray([123, 145, 67, 78, 56, 456])));
-console.log(`--------------------------------`)
+console.log(`--------------------------------`);
