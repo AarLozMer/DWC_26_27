@@ -5,6 +5,7 @@ import viteLogo from './assets/vite.svg'
 import './App.css'
 import Contenedor from './components/UT02/Practica3/Contenedor.jsx'
 import Interprete from './components/UT02/Practica3/Interprete.jsx'
+import Verduras from './components/UT03_use_State/verduras.jsx'
 
 function App() {
   

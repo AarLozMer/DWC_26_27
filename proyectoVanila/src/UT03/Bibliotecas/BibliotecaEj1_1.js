@@ -27,7 +27,8 @@ const sumarNumeros = (...numeros) => {
         })}`;
         
     } else {
-        return `Subnormal introduce bien los datos`;
+        return `Subnormal, introduce bien los datos`;
     }
 }
+
 export  {comprobarNumeros, sumarNumeros};
