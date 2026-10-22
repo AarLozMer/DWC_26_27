@@ -1,9 +1,27 @@
 "use strict";
 const toCani = (texto) => {
     if(esTexto(texto) === true) {
-    const texto_formateado = "";
+        return alternarMayusculas(texto);
+    } else {
+        return `Introduce una cadena de texto, carapollahhh`
+    }
+}
 
-    texto.split('').map((v,i,a) => {
+const esTexto = (text) => {
+    return typeof(text) === "string";
+}
+
+const esCaracter = (caracter) => {
+    return caracter.length === 1;
+}
+
+const cantidadAleatoria = () => {
+    return Math.floor(Math.random()* (5 - 2) + 2);    
+}
+
+const alternarMayusculas = (frase) => {
+    let texto_formateado = "";
+    frase.split('').map((v,i,a) => {
         if(i%2==1) {
             if (v === "c") {
                 texto_formateado+="K";
@@ -34,27 +52,8 @@ const toCani = (texto) => {
             }
         }
     });
-    texto_formateado+=cantidadAleatoria("h");
+    texto_formateado+="H".repeat(cantidadAleatoria());
     return texto_formateado;
-    } else {
-        return `Introduce una cadena de texto, carapollahhh`
-    }
-}
-
-const esTexto = (text) => {
-    return typeof(text) === String;
-}
-
-const esCaracter = (caracter) => {
-    return caracter.length() === 1;
-}
-
-const cantidadAleatoria = (caracter) => {
-    if (esCaracter(caracter)) {
-        return caracter * Math.floor(Math.random()* (5 - 2) + 2);    
-    } else {
-        return `Me has introducido mas de un caracter, retrasado mental`;
-    }
 }
 
 export {toCani};
