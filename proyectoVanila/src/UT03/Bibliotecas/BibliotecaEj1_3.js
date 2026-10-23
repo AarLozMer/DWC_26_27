@@ -1,5 +1,5 @@
 "use strict";
-import {esArray} from "./BibliotecaEj4.js";
+import {esArray} from "./BibliotecaEj1_4.js";
 const calcularTotal = (factura) => {
     if (esArray(factura)) {
         const primerArray = [...factura];
@@ -9,7 +9,7 @@ const calcularTotal = (factura) => {
             return factura.map((v,i,a) => {
                 if (comprobarDouble(v)) {
                 segundoArray[i]= calcularPropina(v);
-                tercerArray[i]= sumarNumeros(v, calcularPropina(v));
+                tercerArray[i]= v + calcularPropina(v);
                 console.log(`Para la ${i+1} factura de ${primerArray[i].toFixed(2)} €, se le atribuye una propina de ${segundoArray[i].toFixed(2)} €, por lo que el precio final es de ${tercerArray[i].toFixed(2)} €`);
                 } else {
                     throw new Error(`No me has introducido una lista de facturas, carapolla`);
@@ -37,11 +37,11 @@ const calcularPropina = (factura) => {
 }
 
 
-
-const sumarNumeros = (cosa1, cosa2) => {
-    return cosa1+cosa2;
-}
-
+/*
+    const sumarNumeros = (cosa1, cosa2) => {
+        return cosa1+cosa2;
+    }
+*/
 const comprobarDouble = (dolorosa) => {
     /*  Con Number.isFinite comprobamos que tenga un tamaño predefinido 
         y con !isInteger comprobamos que no sea entero, 
