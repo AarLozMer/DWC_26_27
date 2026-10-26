@@ -1,10 +1,20 @@
 "use strict";
-import curso from "./curso.json" with {type: "json"};;
 
-const mostrarCurso = () => {
-    for (const propiedad in curso) {
-        console.log(`${propiedad}: ${curso[propiedad]}`);
+// Declaracion objeto JSON Curso
+let curso = {
+    "nombre": "Desarrollo Web",
+    "profesor": "Juan Carlos",
+    "duracion": "120",
+    "alumnado": ["Andrea", "Nerea", "Pedro"],
+    mostrarCurso() {
+        for (const clase in this) {
+            if (typeof  this[clase] !== "function") {
+                console.log(`${clase}: ${this[clase]}`);
+            }
+        }
+    }, 
+    matricular(objeto) {
+        this.alumnado.push(objeto);
     }
 }
-
-export {mostrarCurso};
+export {curso};
