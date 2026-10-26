@@ -1,8 +1,7 @@
 "use strict";
 const toCani = (texto) => {
     if(esTexto(texto) === true) {
-    
-    return alternarMayusculasTexto(texto);
+        return alternarMayusculas(texto);
     } else {
         return `Introduce una cadena de texto, carapollahhh`
     }
@@ -17,12 +16,11 @@ const esCaracter = (caracter) => {
 }
 
 const cantidadAleatoria = () => {
-    return Math.floor(Math.random()* (5 - 2) + 2);            
+    return Math.floor(Math.random()* (5 - 2) + 2);    
 }
 
-const alternarMayusculasTexto = (frase) => {
+const alternarMayusculas = (frase) => {
     let texto_formateado = "";
-
     frase.split('').map((v,i,a) => {
         if(i%2==1) {
             if (v === "c") {
@@ -54,7 +52,7 @@ const alternarMayusculasTexto = (frase) => {
             }
         }
     });
-    texto_formateado+="h".repeat(cantidadAleatoria());
+    texto_formateado+="H".repeat(cantidadAleatoria());
     return texto_formateado;
 }
 

@@ -38,9 +38,9 @@ console.log(`${separador}`);
 
 
 const cani1 = "Allí van los barcos, alzandose en el horizonte";
-const cani2 = "El otro dia le dije a la Paqui que si queria probar mi chocolate, y me dijo que no, que no esta que es una maldita loca que es una ratatta, que ella quiere que le ponga en 4k 4k 4k 4k 4k, y yo le quiero dar, en 4K 4K 4K 4K";
+const cani2 = "Cisiera yo saber, si has dejao tu mala vida, si has dejado de querer";
 // Ejercicio 1 de la practica 2
-import { toCani } from "../Bibliotecas/BibliotecaEJ2_1.js";
+import { toCani } from "./Bibliotecas/BibliotecaEJ2_1.js";
 console.log(`Ejercicio 1 de la practica 2`);
 console.log(`${separador}`);
 console.log(toCani(cani1));
@@ -48,9 +48,13 @@ console.log(toCani(cani2));
 console.log(`${separador}`);
 
 
-// Ejercicio 2 de la practica2
-
-console.log (`Ejercicio 2 de la practica 2`);
+// Ejercicio 2 de la practica 2
+import { temporizador } from "./Bibliotecas/BibliotecaEj2_2.js";
+console.log(`Ejercicio 2 de la practica 2 `);
+console.log(`${separador}`);
+console.log(temporizador(50));
+console.log(temporizador(5, 45));
+console.log(temporizador(1, 67));
+console.log(temporizador(70, 5));
 console.log(`${separador}`);
 
-console.log(`${separador}`);

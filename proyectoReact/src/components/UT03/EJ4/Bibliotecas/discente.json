@@ -1,0 +1,12 @@
+{
+    "id": 1,
+    "nombre": "Paco",
+    "apellidos": "Gutierrez",
+    "aficiones": ["lectura", "correr", "ir al cine"],
+    "notas": {
+        "primera":6,
+        "segunda":7,
+        "tercera":5
+    }
+    
+}
