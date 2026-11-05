@@ -50,7 +50,7 @@ const esNumero = (num) => {
 
 const iniciarCuentaAtras = (tiempo) => {
     const intervaloTiempo = setInterval(() => {
-        if (tiempo <0) {
+        if (tiempo < 0) {
             clearInterval(intervaloTiempo);
             return;
         } 

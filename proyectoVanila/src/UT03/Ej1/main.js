@@ -10,7 +10,7 @@ console.log(`${sumarNumeros(1)}`);
 console.log(`${separador}`);
 
 // Ejercicio 2 de la practica 1
-import {tablasDeMultiplicar, multiplicarNumeros} from "../Bibliotecas/BibiliotecaEj1_2.js";
+import {tablasDeMultiplicar, multiplicarNumeros} from "./Bibliotecas/BibiliotecaEj1_2.js";
 console.log(`Ejercicio 2 de la practica 1`);
 console.log(`${separador}`);
 console.log(tablasDeMultiplicar(6, multiplicarNumeros));
@@ -49,7 +49,7 @@ console.log(`${separador}`);
 
 
 // Ejercicio 2 de la practica 2
-import { temporizador } from "./Bibliotecas/BibliotecaEj2_2.js";
+import { temporizador} from "./Bibliotecas/BibliotecaEj2_2.js";
 console.log(`Ejercicio 2 de la practica 2 `);
 console.log(`${separador}`);
 console.log(temporizador(50));
